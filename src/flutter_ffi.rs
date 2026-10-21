@@ -2729,6 +2729,7 @@ pub fn main_get_common(key: String) -> String {
             }
         } else if key.starts_with("download-file-") {
             let _version = key.replace("download-file-", "");
+            let _version = crate::update_source::version_from_tag(&_version);
             #[cfg(target_os = "windows")]
             return match (
                 crate::platform::windows::is_msi_installed(),

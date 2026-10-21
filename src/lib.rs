@@ -29,6 +29,7 @@ pub mod ipc;
     feature = "flutter"
 )))]
 pub mod ui;
+mod update_source;
 mod version;
 pub use version::*;
 #[cfg(any(target_os = "android", target_os = "ios", feature = "flutter"))]
